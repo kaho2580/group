@@ -20,4 +20,17 @@ Route::post('/posts', 'PostController@store'); //投稿保存操作
 Route::delete('/posts/{post}', 'PostController@delete'); //投稿削除
 Route::get('/categories/{category}', 'CategoryController@index'); //カテゴリー一覧画面
 
-Route::get('/home', 'HomeController@index');
+
+Route::get('/categories/kotteri', 'CategoryController@assari'); //こってり
+Route::get('/categories/assari', 'CategoryController@assari'); //あっさり
+Route::get('/categories/takai', 'CategoryController@assari'); //高い
+Route::get('/categories/yasui', 'CategoryController@yasui'); //安い
+
+
+
+
+Route::get('/home', 'HomeController@index'); 
+Route::get('/kotteri','ReviewController@kotteri');
+
+Route::get('/mypage','MypageController@index');
+Route::get('/mypage/profile','MypageController@show');

@@ -14,19 +14,26 @@ class CategoriesTableSeeder extends Seeder
         DB::table('categories')->insert([
             [
             'id' => '1',
-            'name' => 'PHP',
+            'name' => 'こってり',
             'created_at' => now(),
             'updated_at' => now(),
                 ],
                 [
             'id' => '2',
-            'name' => 'Python',
+            'name' => 'あっさり',
             'created_at' => now(),
             'updated_at' => now(),
                 ],
                 [
             'id' => '3',
-            'name' => 'Ruby',
+            'name' => '高い',
+            'created_at' => now(),
+            'updated_at' => now(),
+                ]
+                ,
+                [
+            'id' => '4',
+            'name' => '安い',
             'created_at' => now(),
             'updated_at' => now(),
                 ]
