@@ -20,4 +20,4 @@ Route::post('/posts', 'PostController@store'); //投稿保存操作
 Route::delete('/posts/{post}', 'PostController@delete'); //投稿削除
 Route::get('/categories/{category}', 'CategoryController@index'); //カテゴリー一覧画面
 
-Route::get('/home', 'HomeController@index'); 
+Route::get('/home', 'HomeController@index');
