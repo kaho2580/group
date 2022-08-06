@@ -6,27 +6,27 @@ use Illuminate\Support\Facades\Schema;
 
 class AddCategoryIdToPostsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->integer('category_id')->unsigned(); //カテゴリーidの追加
-        });
-    }
+    // /**
+    //  * Run the migrations.
+    //  *
+    //  * @return void
+    //  */
+    // public function up()
+    // {
+    //     Schema::table('posts', function (Blueprint $table) {
+    //         $table->integer('category_id')->unsigned(); //カテゴリーidの追加
+    //     });
+    // }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::table('posts', function (Blueprint $table) {
-            //
-        });
-    }
+    // /**
+    //  * Reverse the migrations.
+    //  *
+    //  * @return void
+    //  */
+    // public function down()
+    // {
+    //     Schema::table('posts', function (Blueprint $table) {
+    //         //
+    //     });
+    // }
 }
