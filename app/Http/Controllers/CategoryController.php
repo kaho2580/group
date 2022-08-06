@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Review;
 
 class CategoryController extends Controller
 {
@@ -11,4 +12,14 @@ class CategoryController extends Controller
     {
         return view('categories.index')->with(['posts' => $category->getByCategory()]);
     }
+    
+    public function category(Category $category, Review $review) //こってり、あっさり、高い、安いをそれぞれ表示
+    {
+        $category_id = $category->id;
+        //dd($category_id);
+        $reviews = Review::with('category')->where('category_id',$category_id)->get();
+        //dd($reviews);
+        return view('categories.kotteri')->with(['reviews' => $reviews, 'category_id' => $category_id]);  
+    }
+    
 }
