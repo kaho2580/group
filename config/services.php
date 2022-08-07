@@ -31,7 +31,8 @@ return [
     ],
     
     'api_key'=>[
-        'api_key'=>env('API_KEY'),
+        'api_key1'=>env('API_KEY1'),
+        'api_key2'=>env('API_KEY2'),
     ],
 
 ];
