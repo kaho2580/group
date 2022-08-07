@@ -10,7 +10,12 @@ class CategoryController extends Controller
 {
     public function index(Category $category)
     {
-        return view('categories.index')->with(['posts' => $category->getByCategory()]);
+        return view('categories.index')->with(['reviews' => $category->getByCategory()]);
+    }
+    
+    public function show(Review $review)
+    {
+        return view('categories.show')->with(['review' => $review]);
     }
     
     public function category(Category $category, Review $review) //こってり、あっさり、高い、安いをそれぞれ表示
@@ -19,7 +24,7 @@ class CategoryController extends Controller
         //dd($category_id);
         $reviews = Review::with('category')->where('category_id',$category_id)->get();
         //dd($reviews);
-        return view('categories.kotteri')->with(['reviews' => $reviews, 'category_id' => $category_id]);  
+        return view('categories.kotteri')->with(['reviews' => $reviews, 'category' => $category]);  
     }
     
 }

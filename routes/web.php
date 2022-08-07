@@ -18,8 +18,12 @@ Route::put('/posts/{post}', 'PostController@update'); //編集操作
 Route::get('/posts/{post}', 'PostController@show'); //投稿詳細画面
 Route::post('/posts', 'PostController@store'); //投稿保存操作
 Route::delete('/posts/{post}', 'PostController@delete'); //投稿削除
-
+Route::get('/categories/reviews/{ review }', 'CategoryController@show'); //詳細表示
 Route::get('/categories/{category}', 'CategoryController@category'); //カテゴリー一覧画面
+
+//検索機能
+Route::get('/search','SearchController@index');
+Route::post('/search/word','SearchController@searchWord');
 
 
 
