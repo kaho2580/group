@@ -37,3 +37,7 @@ Route::get('/kotteri','ReviewController@kotteri');
 
 Route::get('/mypage','MypageController@index');
 Route::get('/mypage/profile','MypageController@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
