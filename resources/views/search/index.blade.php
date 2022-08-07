@@ -8,8 +8,6 @@
  
 <div style=background-color:white; width:930px; margin: 0 auto; border-radius:8px; border:solid 1.5px #e2914a;">
   <h1>検索</h1>
-    <h2 class='title'>検索機能をこのページに表示</h2>
-
  
   <form action="/search/word" method="POST">
     @csrf
@@ -19,6 +17,7 @@
       <div class="search_word">
         <input type="text" name="word" placeholder="キーワード検索"
           style="box-sizing: border-box; position: relative; border: 1px solid #999; padding: 3px 10px; border-radius: 20px; height: 2.3em; width: 230px; background-color:#f6f6f6; overflow: hidden;" />
+        <br><br>
         <button type="submit">検索</button>
       </div>
     </div>
@@ -28,15 +27,9 @@
  
   <br>
   <div class="footer">
-  　<button id="goBack" type="button">ホームへ戻る</button>
+  　<a href="\">ホームへ戻る</a>
     
   </div>
-  
-     <script>
-    document.getElementById("goBack").addEventListener("click", function () {
-    location.replace("/");
-    }, false);
-    </script>
 
 </body>
 

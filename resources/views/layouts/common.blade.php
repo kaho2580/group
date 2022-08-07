@@ -16,6 +16,17 @@
       <li><a href="/prefectures/1" style="color:white;">リンク</a></li> <!--後で直す-->
       <li><a href="/mypage/{{Auth::id()}}" style="color:white;">マイページ</a></li>
       <li><a href="/mypage/favorite/{{Auth::id()}}" style="color:white;">お気に入り</a></li>
+      @if(Auth::check())
+      <li>
+        <form action="/logout" method="post">
+          @csrf
+          <input type=submit style="color:gray; font-size:13px;" value="ログアウト">
+          </form>
+      </li>
+      @else
+      <li><a href="/login" style="color:gray; font-size:13px;">ログイン</a></li>
+      @endif
+      </li>
     </ul>
   </nav>
 </header>

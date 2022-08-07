@@ -11,18 +11,19 @@
 |
 */
 
-/*Route::get('/', 'PostController@index'); //一覧画面*/
-Route::get('/posts/create', 'PostController@create'); //投稿作成画面
-Route::get('/posts/{post}/edit', 'PostController@edit'); //投稿編集画面
-Route::put('/posts/{post}', 'PostController@update'); //編集操作
-Route::get('/posts/{post}', 'PostController@show'); //投稿詳細画面
-Route::post('/posts', 'PostController@store'); //投稿保存操作
-Route::delete('/posts/{post}', 'PostController@delete'); //投稿削除
-Route::get('/categories/{category}', 'CategoryController@index'); //カテゴリー一覧画面
+// Route::get('/', 'PostController@index');
+// Route::get('/posts/create', 'PostController@create');
+// Route::get('/posts/{post}/edit', 'PostController@edit'); 
+// Route::put('/posts/{post}', 'PostController@update');
+// Route::get('/posts/{post}', 'PostController@show');
+// Route::post('/posts', 'PostController@store');
+// Route::delete('/posts/{post}', 'PostController@delete');
+// Route::get('/categories/{category}', 'CategoryController@index');
 
-
-Route::get('/categories/reviews/{review}', 'CategoryController@show'); //詳細表示
 Route::get('/categories/{category}', 'CategoryController@category'); //カテゴリー一覧画面
+Route::get('/categories/reviews/{review}', 'CategoryController@show'); //詳細表示
+Route::get('categories/reviews/edit/{review}','CategoryController@edit');
+Route::get('categories/reviews/create','CategoryController@create');
 
 
 //検索機能
@@ -30,11 +31,16 @@ Route::get('/search','SearchController@index');
 Route::post('/search/word','SearchController@searchWord');
 
 
+Route::get('/', 'CategoryController@index'); 
 
-
-Route::get('/', 'HomeController@index'); 
 Route::get('/kotteri','ReviewController@kotteri');
 
 Route::get('/mypage','MypageController@index');
 Route::get('/mypage/profile','MypageController@show');
+
 Route::get('/map', 'MapController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
