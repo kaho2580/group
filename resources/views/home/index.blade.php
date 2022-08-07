@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+
         <h1>レバテックチーム開発</h1>
         <a href="/categories/1">こってり</a>
         <a href="/categories/2">あっさり</a>
