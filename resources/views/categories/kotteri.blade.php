@@ -4,6 +4,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
          <link rel="stylesheet" href="{{ asset('/css/kotteri.css') }}">
+        
     </head>
     <body style="background-color:white; font-family:Hannotate SC; color:#3f3f3f; text-align:center;">
         <p class="sample">{{$category->name}}</p>
