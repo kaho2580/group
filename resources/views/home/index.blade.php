@@ -8,6 +8,8 @@
     <body style="background-color:white; font-family:Hannotate SC; color:#3f3f3f; text-align:center;>
 
      <div style="background-color:white; width:930px; margin: 0 auto; border-radius:8px; border:solid 1.5px #e2914a">
+     
+     <img src="/images/food_beefsteak.png">
         <h2>カテゴリ</h2>
         <!--<a href="/categories/1">こってり</a>-->
         <!--<a href="/categories/2">あっさり</a>-->
@@ -20,7 +22,7 @@
         <button id="category4" type="button">安い</button>
     
         <div>
-            [<a href='/reviews/create'>新規作成</a>]
+            <a href='/reviews/create'>新規作成</a>
         </div>
     </div>
     <script>

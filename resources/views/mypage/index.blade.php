@@ -1,3 +1,6 @@
+@extends('layouts.common')
+@section('content')
+
 <!DOCTYPE HTML>
 <html lang="ja">
     <head>title</head>
@@ -7,3 +10,5 @@
     
     
 </html>
+
+@endsection
