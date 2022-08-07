@@ -2,16 +2,21 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Blog</title>
+        <title>ホーム</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1>home</h1>
-        <h2>お好きなタグを選んでください！</h2>
-        <button id='btn'>こってり</button>
-        <button id='btn'>あっさり</button>
-        <button id='btn'>高級</button>
-        <button id='btn'>格安</button>
+
+        <h1>レバテックチーム開発</h1>
+        <a href="/categories/1">こってり</a>
+        <a href="/categories/2">あっさり</a>
+        <a href="/categories/3">高い</a>
+        <a href="/categories/4">安い</a>
+        
+        <div>
+            [<a href='/reviews/create'>新規作成</a>]
+        </div>
     </body>
+    
 </html>
