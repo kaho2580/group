@@ -20,11 +20,11 @@ Route::post('/posts', 'PostController@store'); //投稿保存操作
 Route::delete('/posts/{post}', 'PostController@delete'); //投稿削除
 Route::get('/categories/{category}', 'CategoryController@index'); //カテゴリー一覧画面
 
-
-Route::get('/categories/reviews/{review}', 'CategoryController@show'); //詳細表示
 Route::get('/categories/{category}', 'CategoryController@category'); //カテゴリー一覧画面
-Route::get('/categories/reviews/{review}/edit', 'CategoryController@edit');
-Route::put('/categories/reviews/{review}', 'CategoryController@update');
+Route::get('/categories/reviews/{review}', 'CategoryController@show'); //詳細表示
+Route::get('categories/reviews/edit/{review}','CategoryController@edit');
+
+
 //検索機能
 Route::get('/search','SearchController@index');
 Route::post('/search/word','SearchController@searchWord');
