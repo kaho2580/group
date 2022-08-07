@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -13,6 +14,7 @@
         @foreach ($reviews as $review)
                 <h2 class='review_link'>
                     <a href="/categories/reviews/{{ $review->id }}" style="color:#7a54a8;">{{ $review->title }}</a>
+                    <h3>{{ $review->body }}</h3>
                 </h2>
       @endforeach
 
