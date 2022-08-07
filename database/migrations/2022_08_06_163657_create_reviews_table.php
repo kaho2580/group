@@ -20,8 +20,6 @@ class CreateReviewsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedInteger('category_id');
-            
-            $table->unsignedInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             
             $table->DateTime('visited_at');
