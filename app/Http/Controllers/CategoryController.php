@@ -15,6 +15,7 @@ class CategoryController extends Controller
     
     public function show(Review $review)
     {
+        //dd($review);
         return view('categories.show')->with(['review' => $review]);
     }
     
