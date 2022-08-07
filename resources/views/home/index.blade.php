@@ -22,7 +22,9 @@
         <button id="category4" type="button">安い</button>
     
         <div>
+            <br>
             <a href='/reviews/create'>新規作成</a>
+            
         </div>
     </div>
     <script>
@@ -41,6 +43,7 @@
     document.getElementById("category4").addEventListener("click", function () {
     location.replace("/categories/4");
     }, false);
+    
     </script>
     </body>
     
