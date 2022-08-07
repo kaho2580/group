@@ -13,7 +13,7 @@ class ReviewsTableSeeder extends Seeder
     {
         DB::table('reviews')->insert([
             'title' => '素晴らしい',
-            'body' => 'おいしい',
+            'body' => 'この辺りで一番おいしいと思います。',
             'user_id' => 1,
             'category_id' => 1,
             'visited_at' => date('2022-01-30'),
@@ -24,7 +24,7 @@ class ReviewsTableSeeder extends Seeder
         
         DB::table('reviews')->insert([
             'title' => '良い',
-            'body' => 'おいしい',
+            'body' => '素材の味がしてすばらしい！',
             'user_id' => 1,
             'category_id' => 2,
             'visited_at' => date('2022-01-30'),
@@ -34,8 +34,8 @@ class ReviewsTableSeeder extends Seeder
         ]);
         
         DB::table('reviews')->insert([
-            'title' => 'とても良い',
-            'body' => 'おいしい',
+            'title' => '及第点',
+            'body' => '美味しいといえば美味しい',
             'user_id' => 1,
             'category_id' => 3,
             'visited_at' => date('2022-01-30'),
@@ -46,7 +46,7 @@ class ReviewsTableSeeder extends Seeder
         
         DB::table('reviews')->insert([
             'title' => '最強',
-            'body' => 'おいしい',
+            'body' => '今まで食べたラーメンで一番美味しいです。',
             'user_id' => 1,
             'category_id' => 1,
             'visited_at' => date('2022-01-30'),
@@ -57,7 +57,7 @@ class ReviewsTableSeeder extends Seeder
         
         DB::table('reviews')->insert([
             'title' => '微妙',
-            'body' => 'おいしい',
+            'body' => '次はないかな...',
             'user_id' => 1,
             'category_id' => 2,
             'visited_at' => date('2022-01-30'),
@@ -68,7 +68,7 @@ class ReviewsTableSeeder extends Seeder
         
         DB::table('reviews')->insert([
             'title' => '待ち時間が長い',
-            'body' => 'おいしい',
+            'body' => 'でも美味しいです。',
             'user_id' => 1,
             'category_id' => 3,
             'visited_at' => date('2022-01-30'),
@@ -79,7 +79,7 @@ class ReviewsTableSeeder extends Seeder
         
         DB::table('reviews')->insert([
             'title' => '想像と違う',
-            'body' => 'おいしい',
+            'body' => '値段も納得いきません',
             'user_id' => 1,
             'category_id' => 4,
             'visited_at' => date('2022-01-30'),
