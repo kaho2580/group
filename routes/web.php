@@ -31,14 +31,16 @@ Route::get('/search','SearchController@index');
 Route::post('/search/word','SearchController@searchWord');
 
 
-
-
 Route::get('/', 'CategoryController@index'); 
+
 Route::get('/kotteri','ReviewController@kotteri');
 
 Route::get('/mypage','MypageController@index');
 Route::get('/mypage/profile','MypageController@show');
 
+Route::get('/map', 'MapController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

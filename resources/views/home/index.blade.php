@@ -9,7 +9,11 @@
     <body style="background-color:white; font-family:Hannotate SC; color:#3f3f3f; text-align:center;>
 
      <div style="background-color:white; width:930px; margin: 0 auto; border-radius:8px; border:solid 1.5px #e2914a">
-     
+     <script
+      src="https://maps.googleapis.com/maps/api/js?key={{config('app.key02')}}&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
      <img src="/images/food_beefsteak.png">
         <h2>カテゴリ</h2>
         <!--<a href="/categories/1">こってり</a>-->
@@ -46,25 +50,88 @@
     }, false);
     
     </script>
+    
+    <input
+          id="pac-input"
+          class="controls"
+          type="text"
+          placeholder="Search Box"
+        />
+
+    <div id="map"></div>
+    
     </body>
     
-    <script>
-        // Initialize and add the map
-        function initMap() {
-        // The location of Uluru
-        const uluru = { lat: 35.6600848, lng: 139.695324 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 16,
-            center: uluru,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-            position: uluru,
-            map: map,
-         });
-        }
-    window.initMap = initMap;
+     <script>
+        function initAutocomplete() {
+
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 35.6600893, lng: 139.6952692 },
+    zoom: 20,
+    mapTypeId: "roadmap",
+    });
+  const input = document.getElementById("pac-input");
+  const searchBox = new google.maps.places.SearchBox(input);
+ 
+
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
+
+  map.addListener("bounds_changed", () => {
+    searchBox.setBounds(map.getBounds());
+  });
+
+  let markers = [];
+  searchBox.addListener("places_changed", () => {
+  
+    const places = searchBox.getPlaces();
+   
+    if (places.length == 0) {
+      return;
+    }
+   
+    markers.forEach((marker) => {
+      marker.setMap(null);
+    });
+    markers = [];
+    const bounds = new google.maps.LatLngBounds();
+   
+    places.forEach((place) => {
+      if (!place.geometry) {
+      
+        console.log("Returned place contains no geometry");
+        return;
+      }
+      const icon = {
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25),
+      };
+      
+      markers.push(
+        new google.maps.Marker({
+          map,
+          icon,
+          title: place.name,
+          position: place.geometry.location,
+           animation: google.maps.Animation.DROP,
+        })
+      );
+
+      if (place.geometry.viewport) {
+       
+        bounds.union(place.geometry.viewport);
+       
+      } else {
+        bounds.extend(place.geometry.location);
+       
+      }
+    });
+    map.fitBounds(bounds);
+    
+  });
+}
     </script>
     
 
