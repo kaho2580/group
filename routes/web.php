@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PostController@index'); //一覧画面
+/*Route::get('/', 'PostController@index'); //一覧画面*/
 Route::get('/posts/create', 'PostController@create'); //投稿作成画面
 Route::get('/posts/{post}/edit', 'PostController@edit'); //投稿編集画面
 Route::put('/posts/{post}', 'PostController@update'); //編集操作
@@ -27,7 +27,7 @@ Route::get('/categories/yasui', 'CategoryController@yasui'); //安い
 
 
 
-Route::get('/home', 'HomeController@index'); 
+Route::get('/', 'HomeController@index'); //一覧画面
 
 Route::get('/mypage','MypageController@index');
 Route::get('/mypage/profile','MypageController@show');

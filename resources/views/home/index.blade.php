@@ -8,8 +8,8 @@
     </head>
     <body>
 
-        <h1>レバテックチーム開発</h1>
-        <a href="/categories/1">こってり</a>
+        <h1>校舎周辺情報</h1>
+        <a href="/categories/kotteri">こってり</a>
         <a href="/categories/2">あっさり</a>
         <a href="/categories/3">高い</a>
         <a href="/categories/4">安い</a>
