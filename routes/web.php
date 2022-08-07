@@ -21,7 +21,7 @@ Route::delete('/posts/{post}', 'PostController@delete'); //投稿削除
 Route::get('/categories/{category}', 'CategoryController@index'); //カテゴリー一覧画面
 
 
-Route::get('/categories/reviews/{ review }', 'CategoryController@show'); //詳細表示
+Route::get('/categories/reviews/{review}', 'CategoryController@show'); //詳細表示
 Route::get('/categories/{category}', 'CategoryController@category'); //カテゴリー一覧画面
 
 
@@ -37,3 +37,4 @@ Route::get('/kotteri','ReviewController@kotteri');
 
 Route::get('/mypage','MypageController@index');
 Route::get('/mypage/profile','MypageController@show');
+
