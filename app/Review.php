@@ -14,7 +14,13 @@ class Review extends Model
 
     public function shops()   //riview1 対 venue1
     {
-    return $this->belongsTo('App\Venue');
+    return $this->belongsTo('App\Shop');
+    }
+    
+ 
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
     }
 
     public function images()   //riview1 対 image1 //

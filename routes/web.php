@@ -21,10 +21,13 @@ Route::delete('/posts/{post}', 'PostController@delete'); //投稿削除
 Route::get('/categories/{category}', 'CategoryController@index'); //カテゴリー一覧画面
 
 
-Route::get('/categories/kotteri', 'CategoryController@assari'); //こってり
-Route::get('/categories/assari', 'CategoryController@assari'); //あっさり
-Route::get('/categories/takai', 'CategoryController@assari'); //高い
-Route::get('/categories/yasui', 'CategoryController@yasui'); //安い
+Route::get('/categories/reviews/{ review }', 'CategoryController@show'); //詳細表示
+Route::get('/categories/{category}', 'CategoryController@category'); //カテゴリー一覧画面
+
+
+//検索機能
+Route::get('/search','SearchController@index');
+Route::post('/search/word','SearchController@searchWord');
 
 
 
