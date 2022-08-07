@@ -32,7 +32,7 @@ Route::post('/search/word','SearchController@searchWord');
 
 
 
-Route::get('/', 'HomeController@index'); 
+Route::get('/home', 'HomeController@index'); 
 Route::get('/kotteri','ReviewController@kotteri');
 
 Route::get('/mypage','MypageController@index');

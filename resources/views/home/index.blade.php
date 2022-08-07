@@ -1,3 +1,4 @@
+
 @extends('layouts.common')
 @section('content')
 <!DOCTYPE html>
