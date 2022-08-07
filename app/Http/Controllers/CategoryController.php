@@ -8,9 +8,14 @@ use App\Review;
 
 class CategoryController extends Controller
 {
-    public function index(Category $category)
+    // public function index(Category $category)
+    // {
+    //     return view('categories.index')->with(['reviews' => $category->getByCategory()]);
+    // }
+    
+     public function index()
     {
-        return view('categories.index')->with(['reviews' => $category->getByCategory()]);
+        return view('home/index');
     }
     
     public function show(Review $review)
