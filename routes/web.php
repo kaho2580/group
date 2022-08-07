@@ -23,8 +23,8 @@ Route::get('/categories/{category}', 'CategoryController@index'); //カテゴリ
 
 Route::get('/categories/reviews/{review}', 'CategoryController@show'); //詳細表示
 Route::get('/categories/{category}', 'CategoryController@category'); //カテゴリー一覧画面
-
-
+Route::get('/categories/reviews/{review}/edit', 'CategoryController@edit');
+Route::put('/categories/reviews/{review}', 'CategoryController@update');
 //検索機能
 Route::get('/search','SearchController@index');
 Route::post('/search/word','SearchController@searchWord');
@@ -37,3 +37,4 @@ Route::get('/kotteri','ReviewController@kotteri');
 
 Route::get('/mypage','MypageController@index');
 Route::get('/mypage/profile','MypageController@show');
+
