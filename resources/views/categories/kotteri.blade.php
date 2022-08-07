@@ -13,7 +13,7 @@
     <div class='review_list'>
         @foreach ($reviews as $review)
                 <h2 class='review_link'>
-                    <a href="/categories/reviews/{{ $review->id }}" style="color:#7a54a8;">{{ $review->title }}</a>
+                    <a href="/categories/reviews/{{ $review->id }}/edit" style="color:#7a54a8;">{{ $review->title }}</a>
                     <h3>{{ $review->body }}</h3>
                 </h2>
       @endforeach

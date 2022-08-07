@@ -9,9 +9,14 @@
     <body>
         <h1>{{$review->title}}</h1>
          <h2>{{$review->body}}</h2>
+         <h3>{{$review->updated_at}}</h3>
+          <a href="/categories/reviews/{{ $review->id }}" style="color:#7a54a8;">編集</a>
+          
+          <a href="/categories/{{$review->category->id}}">戻る</a>
+          
         
        
 
-    </div>
+    
     </body>
     </html>

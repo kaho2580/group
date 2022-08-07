@@ -26,5 +26,16 @@ class CategoryController extends Controller
         //dd($reviews);
         return view('categories.kotteri')->with(['reviews' => $reviews, 'category' => $category]);  
     }
-    
+   
+    public function edit(Review $review) 
+    {
+        return view('categories.edit')->with(['review' => $review]);
+    }
+     
+    public function update(Request $request, Review $review)
+    {
+        $input = $request['review'];
+        $review->fill($input)->save();
+        return redirect('/categories/reviews/' . $review->id);
+    }   
 }
