@@ -1,17 +1,18 @@
 @extends('layouts.common')
-@section('content')<!DOCTYPE html>
+@section('content')
+<head>
+  <link rel="stylesheet" href="{{ asset('/css/search.css') }}">
+</head>
 
-<body>
+<bod style="font-family:Hannotate SC; color:#3f3f3f; text-align:center;"y>
  
-
+<div style=background-color:white; width:930px; margin: 0 auto; border-radius:8px; border:solid 1.5px #e2914a;">
   <h1>検索</h1>
-    <h2 class='title'>検索機能をこのページに表示</h2>
-
  
   <form action="/search/word" method="POST">
     @csrf
 
-    <h3 style="color:#884898;">キーワードで検索</h3>
+    <h3 style="color:#e2914a;;">キーワードで検索</h3>
     <div class="search_box">
       <div class="search_word">
         <input type="text" name="word" placeholder="キーワード検索"
@@ -25,7 +26,8 @@
  
   <br>
   <div class="footer">
-    <a href="/home">戻る</a>
+  　<a href="\">ホームへ戻る</a>
+    
   </div>
 
 </body>
