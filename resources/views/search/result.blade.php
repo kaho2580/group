@@ -7,8 +7,6 @@
 <body style="font-family:Hannotate SC; color:#3f3f3f; text-align:center;"> <!--ページ全体のフォントを指定-->
   <h1>検索結果</h1>
   <br>
-  <button id="goBack" type="button">戻る</button>
-  <br>
   <div style="font-size:20px;">
       <div class="list">
         @foreach ($results as $result)
@@ -19,6 +17,7 @@
         </div>
     </div>
     </div>
+      <button id="goBack" type="button">戻る</button>
    
    <script>
     document.getElementById("goBack").addEventListener("click", function () {

@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1>レバテックチーム開発</h1>
+        <h1>このページは見本です</h1>
         <h2>カテゴリー「{{$posts->first()->category->name}}」の一覧ページ</h2>
         <div class='posts'>
             @foreach($posts as $post)
@@ -31,7 +31,7 @@
             {{ $posts->links() }}
         </div>
         <div>
-            [<a href='/posts/create'>新規作成</a>]
+            <a href='/posts/create'>新規作成</a>
         </div>
         <a href="/">一覧へ戻る</a>
     </body>
