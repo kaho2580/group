@@ -15,7 +15,7 @@
         <!--<a href="/categories/2">あっさり</a>-->
         <!--<a href="/categories/3">高い</a>-->
         <!--<a href="/categories/4">安い</a>-->
-        
+
         <button id="category1" type="button">こってり</button>
         <button id="category2" type="button">あっさり</button>
         <button id="category3" type="button">高い</button>
@@ -44,5 +44,25 @@
     </script>
     </body>
     
+    <script>
+        // Initialize and add the map
+        function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 35.6600848, lng: 139.695324 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+         });
+        }
+    window.initMap = initMap;
+    </script>
+    
+
 </html>
 @endsection
