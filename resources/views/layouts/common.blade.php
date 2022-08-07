@@ -8,14 +8,14 @@
 </head>
 
 <body>
-<header>
+<header style="font-family:Hannotate SC;">
   <nav class="gnav">
     <ul class="menu">
-      <li><a href="/">ホーム</a></li>
-      <li><a href="/search">検索</a></li>
-      <li><a href="/prefectures/1">リンク</a></li> <!--後で直す-->
-      <li><a href="/mypage/{{Auth::id()}}">マイページ</a></li>
-      <li><a href="/mypage/favorite/{{Auth::id()}}">お気に入り</a></li>
+      <li><a href="/" style="color:white;"ホーム</a></li>
+      <li><a href="/search" style="color:white;">検索</a></li>
+      <li><a href="/prefectures/1" style="color:white;">リンク</a></li> <!--後で直す-->
+      <li><a href="/mypage/{{Auth::id()}}" style="color:white;">マイページ</a></li>
+      <li><a href="/mypage/favorite/{{Auth::id()}}" style="color:white;">お気に入り</a></li>
     </ul>
   </nav>
 </header>
